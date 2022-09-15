@@ -2,7 +2,7 @@ import React, { SVGProps } from 'react'
 
 
 interface Props{
-    Icon : SVGProps
+    Icon : (props: SVGProps<SVGSVGElement>) => JSX.Element
       
     title: string
 }

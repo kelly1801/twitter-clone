@@ -11,7 +11,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import SidebarRow from './SidebarRow';
 function Sidebar() {
   return (
-    <div className='col-span-2 flex flex-col'>
+    <div className='m-3 col-span-2 flex flex-col'>
 <TwitterIcon  className='h-10 w-10 text-twitter' />
 <SidebarRow Icon={HomeOutlinedIcon} title='Home'/>
 <SidebarRow Icon={TagOutlinedIcon} title='Explore'/>
