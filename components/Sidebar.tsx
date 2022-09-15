@@ -12,7 +12,7 @@ import SidebarRow from './SidebarRow';
 function Sidebar() {
   return (
     <div className='m-3 col-span-2 flex flex-col'>
-<TwitterIcon  className='h-10 w-10 text-twitter' />
+<TwitterIcon  className='m-3 h-10 w-10 text-twitter' />
 <SidebarRow Icon={HomeOutlinedIcon} title='Home'/>
 <SidebarRow Icon={TagOutlinedIcon} title='Explore'/>
 <SidebarRow Icon={NotificationsNoneOutlinedIcon} title='Notificaticons'/>
