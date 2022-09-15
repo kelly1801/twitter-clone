@@ -7,7 +7,7 @@ import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import CameraAltOutlinedIcon from '@mui/icons-material/CameraAltOutlined';
 function TweetBox() {
     
-    const [input, setInput] = useState<string>("")
+    const [input, setInput] = React.useState<string>("")
     
     return ( 
         <div className="flex space-x-2 p-5">
