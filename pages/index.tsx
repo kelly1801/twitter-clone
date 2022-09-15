@@ -1,6 +1,8 @@
 import Head from 'next/head'
-
 import Sidebar from '../components/Sidebar'
+import Feed from '../components/Feed'
+import Widgets from '../components/Widgets' 
+
 export default function Home() {
   return (
     <div >
@@ -10,9 +12,10 @@ export default function Home() {
       
       </Head>
 
-      <main>
+      <main className="grid grid-cols-9">
        <Sidebar/>
-       
+<Feed/>     
+<Widgets/>  
 </main>
         
     </div>
