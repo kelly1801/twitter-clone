@@ -6,6 +6,9 @@ import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import CameraAltOutlinedIcon from '@mui/icons-material/CameraAltOutlined';
 function TweetBox() {
+    
+    const [input, setInput] = useState<string>("")
+    
     return ( 
         <div className="flex space-x-2 p-5">
             <img src="https://links.papareact.com/gll" alt="generic user picture" className="h-14 w-14 rounded-full object-cover mt-4"
@@ -13,7 +16,9 @@ function TweetBox() {
 
             <div className="flex flex-1 items-centerpl-2">
                 <form className="flex flex-1 flex-col">
-                    <input type="text" placeholder="What's Happening?"  className="h-24 w-full text-xl outline-none placeholder:text-xl"/>
+                    <input value={input}
+                    onChange={(event) => setInput(event.target.value)}
+                    type="text" placeholder="What's Happening?"  className="h-24 w-full text-xl outline-none placeholder:text-xl"/>
 
                     <div className="flex items-center">
                         <div className="flex flex-1 space-x-2 text-twitter">
@@ -24,7 +29,8 @@ function TweetBox() {
                             <LocationOnOutlinedIcon className="h-5 w-5" />
                         </div>
 
-                        <button className="bg-twitter px-5 py-2 font-bold text-white rounded-full">Tweet</button>
+                        <button disabled={!input} className="
+                        disabled:opacity-40 bg-twitter px-5 py-2 font-bold text-white rounded-full">Tweet</button>
 
                     </div>
                 </form>
