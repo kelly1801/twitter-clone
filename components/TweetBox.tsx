@@ -8,13 +8,7 @@ import CameraAltOutlinedIcon from '@mui/icons-material/CameraAltOutlined';
 function TweetBox() {
     return ( 
         <div className="flex space-x-2 p-5">
-            <Image
-                src="https://links.papareact.com/gll"
-                alt="generic user picture"
-                width={100}
-                height={100}
-
-                className="h-14 w-14 rounded-full object-cover mt-4"
+            <img src="https://links.papareact.com/gll" alt="generic user picture" className="h-14 w-14 rounded-full object-cover mt-4"
             />
 
             <div className="flex flex-1 items-centerpl-2">
