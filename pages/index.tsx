@@ -2,8 +2,13 @@ import Head from 'next/head'
 import Sidebar from '../components/Sidebar'
 import Feed from '../components/Feed'
 import Widgets from '../components/Widgets' 
-
-export default function Home() {
+import { fetchTweets } from '../utils/fetchTweets'
+import { Tweet } from '../typing'
+import {GetServerSideProps} from 'next'
+interface Props {
+  tweets: Tweet[]
+}
+export default function Home({tweets}: Props) {
   return (
     <div className="lg:max-w-6xl mx-auto max-h-screen overflow-hidden">
       <Head>
@@ -14,10 +19,22 @@ export default function Home() {
 
       <main className="grid grid-cols-9">
        <Sidebar/>
-<Feed/>     
+<Feed tweets={tweets}/>     
 <Widgets/>  
 </main>
         
     </div>
   )
+}
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+ 
+  const tweets = await fetchTweets();
+ 
+  return {
+    props:{
+      tweets,
+    }
+  }
+
 }

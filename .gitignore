@@ -4,7 +4,9 @@
 /node_modules
 /.pnp
 .pnp.js
-
+/sanityF/node_modules
+/sanityF/config
+.vscode
 # testing
 /coverage
 
@@ -27,7 +29,7 @@ yarn-error.log*
 
 # local env files
 .env*.local
-
+.local.env
 # vercel
 .vercel
 
